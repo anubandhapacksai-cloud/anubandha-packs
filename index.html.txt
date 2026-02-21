@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Anubandha Packs | Packaging Pouch Manufacturer</title>
+  <meta name="description" content="Anubandha Packs is a packaging pouch manufacturer offering high-quality flexible packaging solutions in India.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Anubandha Packs</h1>
+  <h2>Packaging Pouch Manufacturer</h2>
+
+  <p>
+    Anubandha Packs is a leading packaging pouch manufacturer
+    providing high-quality flexible packaging solutions for
+    food, FMCG, and industrial applications.
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="products.html">Products</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</body>
+</html>
