@@ -4,187 +4,485 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anubandha Packs | Premium Packaging Pouches</title>
+  <meta name="description" content="Anubandha Packs — Packaging pouch manufacturer for stand-up zipper, spout, side gusset, flat, centre seal and more. Low MOQ, custom printing, pan-India supply." />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <!-- Top progress glow (premium touch) -->
+  <div class="top-glow" aria-hidden="true"></div>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="#">
-      <img src="images/rogo.jpg" class="logo" alt="Anubandha Packs Logo">
-      <div class="brand-text">
-        <strong>Anubandha Packs</strong>
-        <span>Packaging Pouch Manufacturer</span>
-      </div>
-    </a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <img src="images/rogo.jpg" class="logo" alt="Anubandha Packs Logo">
+        <div class="brand-text">
+          <strong>Anubandha Packs</strong>
+          <span>Packaging Pouch Manufacturer</span>
+        </div>
+      </a>
 
-    <nav class="menu">
-      <a href="#products">Products</a>
-      <a href="#trusted">Trusted By</a>
-      <a href="#contact">Contact</a>
-      <a class="btn btn-small" href="#contact">Request Quote</a>
-    </nav>
-  </div>
-</header>
+      <nav class="menu">
+        <a href="#products">Products</a>
+        <a href="#why">Why Us</a>
+        <a href="#trusted">Trusted By</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-left">
-      <div class="kicker">Premium Flexible Packaging</div>
-      <h1>Packaging pouches that make your brand look premium.</h1>
-      <p class="lead">
-        Stand-up zipper pouches, spout pouches, side gusset, flat pouches and more — with clean finish and custom printing options.
-      </p>
-
-      <div class="hero-cta">
-        <a class="btn" href="#contact">Get Quote</a>
-        <a class="btn btn-ghost" href="#products">Browse Products</a>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="icon-sun">☀</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <a class="btn btn-small" href="#contact">Request Quote</a>
       </div>
 
-      <div class="trust">
-        <div class="pill">Low MOQ options</div>
-        <div class="pill">Custom printing</div>
-        <div class="pill">Pan-India supply</div>
-      </div>
+      <button class="burger" id="burger" aria-label="Open menu">☰</button>
     </div>
 
-    <div class="hero-right">
-      <div class="hero-card">
-        <img src="images/standup.jpg" alt="Stand-up zipper pouch">
-        <div class="hero-card-text">
-          <strong>Stand-up Zipper Pouches</strong>
-          <span>Best for dry fruits, coffee, millets & snacks</span>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#trusted">Trusted By</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-full" href="#contact">Request Quote</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="kicker">
+          <span class="dot"></span>
+          Premium Flexible Packaging • Low MOQ • Custom Printing
+        </div>
+
+        <h1 class="hero-title">
+          Packaging pouches that make your brand
+          <span class="flip-wrap" aria-label="look premium">
+            <span class="flip" id="flipWord">premium</span>
+          </span>.
+        </h1>
+
+        <p class="lead">
+          We manufacture stand-up zipper pouches, spout pouches, side gusset, flat pouches and more —
+          with clean finish, fast support, and export-ready quality.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Get Quote</a>
+          <a class="btn btn-ghost" href="#products">Browse Products</a>
+          <a class="btn btn-ghost" href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
+             target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="pill">✅ Low MOQ</div>
+          <div class="pill">✅ Custom Printing</div>
+          <div class="pill">✅ Pan-India Supply</div>
+          <div class="pill">✅ Food-grade Materials</div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>Fast</strong>
+            <span>Quote support</span>
+          </div>
+          <div class="stat">
+            <strong>Premium</strong>
+            <span>Retail finish</span>
+          </div>
+          <div class="stat">
+            <strong>Reliable</strong>
+            <span>Consistent quality</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-glass">
+          <div class="hero-media">
+            <!-- Use your best hero image here -->
+            <img src="images/paper.jpg" alt="Premium packaging showcase">
+          </div>
+
+          <div class="hero-mini">
+            <div class="mini-card">
+              <img src="images/standup.jpg" alt="Stand-up zipper pouch">
+              <div>
+                <strong>Stand-up Zipper</strong>
+                <span>Best for dry fruits, coffee, millets</span>
+              </div>
+            </div>
+
+            <div class="mini-card">
+              <img src="images/spout.jpg" alt="Spout pouch">
+              <div>
+                <strong>Spout Pouches</strong>
+                <span>Liquids & semi-liquids packaging</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-note">
+            <span class="badge">New</span>
+            <span>Request a quote in 30 seconds.</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- PRODUCTS -->
-<section id="products" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Our Product Range</h2>
-      <p>Catalog-style packaging solutions — simple, premium, and easy to choose.</p>
-    </div>
+    <!-- background orbs -->
+    <div class="orb o1" aria-hidden="true"></div>
+    <div class="orb o2" aria-hidden="true"></div>
+    <div class="orb o3" aria-hidden="true"></div>
+  </section>
 
-    <div class="grid">
-      <article class="card">
-        <img src="images/standup.jpg" alt="Stand-up zipper pouches">
-        <h3>Stand-up Zipper Pouches</h3>
-        <p>Strong stand-up structure with zipper. Great for dry items & retail packs.</p>
-      </article>
+  <!-- TRUSTED -->
+  <section id="trusted" class="trusted">
+    <div class="container">
+      <div class="trusted-head">
+        <h2>Trusted by Our Clients</h2>
+        <p class="muted">Brands choose us for consistent quality and premium finishing.</p>
+      </div>
 
-      <article class="card">
-        <img src="images/spout.jpg" alt="Spout pouches">
-        <h3>Spout Pouches</h3>
-        <p>Leak-proof packaging for liquids & semi-liquids like sauces and juices.</p>
-      </article>
+      <div class="logo-slider">
+        <div class="logo-track">
+          <img src="images/client1.jpg" alt="Client logo 1" loading="lazy">
+          <img src="images/client2.jpg" alt="Client logo 2" loading="lazy">
+          <img src="images/client3.jpg" alt="Client logo 3" loading="lazy">
+          <img src="images/client4.jpg" alt="Client logo 4" loading="lazy">
 
-      <article class="card">
-        <img src="images/sidegusset.jpg" alt="Side gusset pouches">
-        <h3>Side Gusset Pouches</h3>
-        <p>More volume, premium shelf look — perfect for coffee, grains & dry products.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/flat.jpg.jpg" alt="Flat pouches">
-        <h3>Flat Pouches</h3>
-        <p>Cost-effective pouches for single-serve and compact packing.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/centreseal.jpg" alt="Centre seal pouches">
-        <h3>Centre Seal Pouches</h3>
-        <p>Reliable sealing and strong structure for FMCG packaging.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/threeside.jpg" alt="Three side seal pouches">
-        <h3>Three Side Seal Pouches</h3>
-        <p>Compact pouches ideal for samples, sachets and small packs.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- TRUSTED BY -->
-<section id="trusted" class="trusted">
-  <div class="container">
-    <h2 class="trusted-title">Trusted by Our Clients</h2>
-
-    <div class="logo-slider">
-      <div class="logo-track">
-        <!-- set A -->
-        <img src="images/client1.jpg" alt="Client 1" loading="lazy">
-        <img src="images/client2.jpg" alt="Client 2" loading="lazy">
-        <img src="images/client3.jpg" alt="Client 3" loading="lazy">
-        <img src="images/client4.jpg" alt="Client 4" loading="lazy">
-
-        <!-- duplicate for smooth loop -->
-        <img src="images/client1.jpg" alt="Client 1 duplicate" loading="lazy">
-        <img src="images/client2.jpg" alt="Client 2 duplicate" loading="lazy">
-        <img src="images/client3.jpg" alt="Client 3 duplicate" loading="lazy">
-        <img src="images/client4.jpg" alt="Client 4 duplicate" loading="lazy">
+          <!-- duplicate for loop -->
+          <img src="images/client1.jpg" alt="Client logo 1 duplicate" loading="lazy">
+          <img src="images/client2.jpg" alt="Client logo 2 duplicate" loading="lazy">
+          <img src="images/client3.jpg" alt="Client logo 3 duplicate" loading="lazy">
+          <img src="images/client4.jpg" alt="Client logo 4 duplicate" loading="lazy">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container contact">
-    <div>
-      <h2>Request a Quote</h2>
-      <p class="muted">Send your pouch type, size, quantity and printing requirement.</p>
+  <!-- WHY US -->
+  <section id="why" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why Anubandha Packs</h2>
+        <p>Premium look, strong sealing, and clean printing — built for brands that want to scale.</p>
+      </div>
 
-      <div class="contact-box">
-        <div><strong>Phone / WhatsApp:</strong> <a href="tel:+919591079347">+91 95910 79347</a></div>
+      <div class="features">
+        <div class="feature">
+          <div class="f-icon">💎</div>
+          <h3>Premium finishing</h3>
+          <p>Clean edges, strong sealing and a shelf-ready look that feels high-end.</p>
+        </div>
+
+        <div class="feature">
+          <div class="f-icon">🎨</div>
+          <h3>Custom printing</h3>
+          <p>Digital/printed packaging support with rich color and sharp details.</p>
+        </div>
+
+        <div class="feature">
+          <div class="f-icon">📦</div>
+          <h3>Multiple pouch types</h3>
+          <p>Stand-up zipper, spout, side gusset, flat, centre seal and more.</p>
+        </div>
+
+        <div class="feature">
+          <div class="f-icon">⚡</div>
+          <h3>Fast quote support</h3>
+          <p>Send size, quantity and printing. Get a clear quotation quickly.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="form">
-      <label>Copy this message and send on WhatsApp:</label>
-      <textarea readonly rows="8">Hi Anubandha Packs,
-I need quotation for:
-Pouch type:
-Size (W x H):
-Printing: Yes/No
-Quantity:
-Delivery location:
-Thank you.</textarea>
+  <!-- PRODUCTS -->
+  <section id="products" class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Product Range</h2>
+        <p>Catalog-style packaging solutions — simple, premium, and easy to choose.</p>
+      </div>
 
-      <a class="btn btn-full"
-         href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
-         target="_blank" rel="noopener">
-        Send on WhatsApp
-      </a>
+      <div class="grid">
+        <article class="card">
+          <div class="card-img">
+            <img src="images/standup.jpg" alt="Stand-up zipper pouches">
+          </div>
+          <div class="card-body">
+            <h3>Stand-up Zipper Pouches</h3>
+            <p>Strong stand-up structure with zipper. Great for dry items & retail packs.</p>
+            <a class="card-link" href="#contact">Request quote →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/spout.jpg" alt="Spout pouches">
+          </div>
+          <div class="card-body">
+            <h3>Spout Pouches</h3>
+            <p>Leak-proof packaging for liquids & semi-liquids like sauces and juices.</p>
+            <a class="card-link" href="#contact">Request quote →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/sidegusset.jpg" alt="Side gusset pouches">
+          </div>
+          <div class="card-body">
+            <h3>Side Gusset Pouches</h3>
+            <p>More volume, premium shelf look — perfect for coffee, grains & dry products.</p>
+            <a class="card-link" href="#contact">Request quote →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <!-- your file is flat.jpg.jpg -->
+            <img src="images/flat.jpg.jpg" alt="Flat pouches">
+          </div>
+          <div class="card-body">
+            <h3>Flat Pouches</h3>
+            <p>Cost-effective pouches for single-serve and compact packing.</p>
+            <a class="card-link" href="#contact">Request quote →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/centreseal.jpg" alt="Centre seal pouches">
+          </div>
+          <div class="card-body">
+            <h3>Centre Seal Pouches</h3>
+            <p>Reliable sealing and strong structure for FMCG packaging.</p>
+            <a class="card-link" href="#contact">Request quote →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="images/threeside.jpg" alt="Three side seal pouches">
+          </div>
+          <div class="card-body">
+            <h3>Three Side Seal Pouches</h3>
+            <p>Compact pouches ideal for samples, sachets and small packs.</p>
+            <a class="card-link" href="#contact">Request quote →</a>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container foot">
-    <span>© <span id="y"></span> Anubandha Packs</span>
-    <span class="muted">Hosted on GitHub Pages</span>
-  </div>
-</footer>
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>What customers love</h2>
+        <p>Simple, premium and reliable — that’s the goal.</p>
+      </div>
 
-<!-- PREMIUM FLOATING WHATSAPP -->
-<a href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
-   class="whatsapp-container"
-   target="_blank" aria-label="Chat on WhatsApp" rel="noopener">
-  <span class="whatsapp-text">Chat With Us</span>
-  <div class="whatsapp-icon">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  </div>
-</a>
+      <div class="testimonials">
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p>“Premium finish and great support. Our coffee packs look shelf-ready now.”</p>
+          <div class="t-name">— FMCG Brand (Coffee)</div>
+        </div>
 
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p>“Quick quotation + good quality sealing. Perfect for our dry fruits packs.”</p>
+          <div class="t-name">— Retail Brand (Dry Fruits)</div>
+        </div>
 
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p>“We needed low MOQ and custom printing — delivered exactly as promised.”</p>
+          <div class="t-name">— Startup Brand (Snacks)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-soft">
+    <div class="container contact">
+      <div class="contact-left">
+        <h2>Request a Quote</h2>
+        <p class="muted">Send pouch type, size, quantity and printing requirement. We’ll respond quickly.</p>
+
+        <div class="contact-box">
+          <div><strong>Phone / WhatsApp:</strong> <a href="tel:+919591079347">+91 95910 79347</a></div>
+          <div class="muted small">Available Mon–Sat • Quick response</div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches.">
+            WhatsApp Now
+          </a>
+          <a class="btn btn-ghost" href="#products">View Products</a>
+        </div>
+      </div>
+
+      <div class="form glass">
+        <h3>Inquiry Form</h3>
+        <p class="muted small">This opens your email app (Gmail/Outlook) with details.</p>
+
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="field">
+              <label>Your Name</label>
+              <input type="text" id="name" placeholder="Enter name" required>
+            </div>
+
+            <div class="field">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" id="phone" placeholder="e.g. 95910 79347" required>
+            </div>
+
+            <div class="field">
+              <label>Pouch Type</label>
+              <select id="ptype" required>
+                <option value="">Select</option>
+                <option>Stand-up Zipper</option>
+                <option>Spout Pouch</option>
+                <option>Side Gusset</option>
+                <option>Flat / Centre Seal</option>
+                <option>Centre Seal</option>
+                <option>Three Side Seal</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Size (W x H)</label>
+              <input type="text" id="size" placeholder="e.g. 150mm x 220mm" required>
+            </div>
+
+            <div class="field">
+              <label>Printing</label>
+              <select id="print" required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label>Quantity</label>
+              <input type="text" id="qty" placeholder="e.g. 5000 pcs" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea id="msg" rows="5" placeholder="Any special requirement?"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-full" type="submit">Send Inquiry by Email</button>
+            <a class="btn btn-ghost btn-full" target="_blank" rel="noopener"
+               href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches.">
+              Send on WhatsApp
+            </a>
+          </div>
+
+          <p class="muted small">Tip: If email doesn’t open, use WhatsApp button above.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot">
+      <span>© <span id="y"></span> Anubandha Packs</span>
+      <span class="muted">Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
+     class="whatsapp-float"
+     target="_blank" aria-label="Chat on WhatsApp" rel="noopener">
+    <span class="w-text">Chat With Us</span>
+    <span class="w-icon">💬</span>
+  </a>
+
+  <script>
+    // Year
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const burger = document.getElementById("burger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    burger.addEventListener("click", () => mobileMenu.classList.toggle("open"));
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.remove("open")));
+
+    // Dark mode
+    const toggle = document.getElementById("themeToggle");
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") document.documentElement.classList.add("dark");
+    toggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+    });
+
+    // Animated hero word
+    const words = ["premium", "modern", "powerful", "trusted"];
+    const flip = document.getElementById("flipWord");
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % words.length;
+      flip.classList.add("flip-out");
+      setTimeout(() => {
+        flip.textContent = words[i];
+        flip.classList.remove("flip-out");
+      }, 220);
+    }, 1800);
+
+    // Email integration (mailto)
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const ptype = document.getElementById("ptype").value.trim();
+      const size = document.getElementById("size").value.trim();
+      const print = document.getElementById("print").value.trim();
+      const qty = document.getElementById("qty").value.trim();
+      const msg = document.getElementById("msg").value.trim();
+
+      const subject = encodeURIComponent(`Quote Request - ${ptype} - ${name}`);
+      const body = encodeURIComponent(
+`Hi Anubandha Packs,
+
+Please share quotation details:
+
+Name: ${name}
+Phone/WhatsApp: ${phone}
+Pouch Type: ${ptype}
+Size (W x H): ${size}
+Printing: ${print}
+Quantity: ${qty}
+
+Message:
+${msg || "-"}
+
+Thank you.`
+      );
+
+      // Change this email if you have official email:
+      const toEmail = "madhusudanmb45@gmail.com";  // <-- replace later with your company email
+      window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
