@@ -1,2 +1,2 @@
-# anubandha-packs
+# anubandhapacks
 Anubandha Packs product catalog website
