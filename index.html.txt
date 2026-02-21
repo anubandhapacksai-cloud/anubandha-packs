@@ -3,26 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>Anubandha Packs | Packaging Pouch Manufacturer</title>
-  <meta name="description" content="Anubandha Packs is a packaging pouch manufacturer offering high-quality flexible packaging solutions in India.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anubandha Packs is a leading packaging pouch manufacturer in India offering standup, spout, flat and custom pouches.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1>Anubandha Packs</h1>
-  <h2>Packaging Pouch Manufacturer</h2>
-
-  <p>
-    Anubandha Packs is a leading packaging pouch manufacturer
-    providing high-quality flexible packaging solutions for
-    food, FMCG, and industrial applications.
-  </p>
-
+<header>
+  <div class="logo">Anubandha Packs</div>
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Us</a> |
-    <a href="products.html">Products</a> |
-    <a href="contact.html">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Premium Packaging Pouch Manufacturer</h1>
+  <p>High-quality flexible packaging solutions for Food, FMCG & Industrial applications.</p>
+  <a href="#contact" class="btn">Get a Quote</a>
+</section>
+
+<section class="products" id="products">
+  <h2>Our Products</h2>
+  <div class="product-grid">
+    <div class="card">
+      <h3>Standup Pouches</h3>
+      <p>Durable and premium quality standup zipper pouches.</p>
+    </div>
+    <div class="card">
+      <h3>Spout Pouches</h3>
+      <p>Leak-proof and flexible packaging for liquid products.</p>
+    </div>
+    <div class="card">
+      <h3>Flat & Center Seal</h3>
+      <p>Cost-effective packaging for various industries.</p>
+    </div>
+    <div class="card">
+      <h3>Custom Printed Pouches</h3>
+      <p>Digital & rotogravure printed premium packaging.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Anubandha Packs</h2>
+  <p>
+    Anubandha Packs is a trusted packaging pouch manufacturer in India,
+    delivering high-quality flexible packaging solutions with advanced
+    technology and strict quality control.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: anubandhapacksai@gmail.com</p>
+  <p>Phone: +91-XXXXXXXXXX</p>
+</section>
+
+<footer>
+  <p>© 2026 Anubandha Packs | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
