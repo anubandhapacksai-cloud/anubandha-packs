@@ -18,6 +18,7 @@ body{
 a{color:inherit}
 .container{width:min(1120px,92%);margin:0 auto}
 
+/* Header */
 .site-header{
   position:sticky;top:0;z-index:50;
   background:rgba(255,255,255,.92);
@@ -35,10 +36,19 @@ a{color:inherit}
 .brand-text strong{display:block}
 .brand-text span{display:block;font-size:12px;color:var(--muted);margin-top:2px}
 
+/* Optional logo if you use images/rogo.jpg */
+/*
+.logo{
+  width:42px;height:42px;border-radius:12px;
+  object-fit:cover;display:block;
+}
+*/
+
 .menu{display:flex;gap:18px;align-items:center}
 .menu a{text-decoration:none;font-weight:700;color:var(--text);opacity:.9}
 .menu a:hover{opacity:1}
 
+/* Buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   padding:12px 18px;border-radius:12px;
@@ -56,6 +66,7 @@ a{color:inherit}
 }
 .btn-full{width:100%}
 
+/* Hero */
 .hero{
   padding:64px 0 40px;
   background:
@@ -98,11 +109,13 @@ h1{font-size:44px;line-height:1.1;margin:0 0 12px}
 .hero-card-text strong{display:block}
 .hero-card-text span{display:block;color:var(--muted);font-size:13px;margin-top:4px}
 
+/* Sections */
 .section{padding:52px 0}
 .section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .section-head h2{margin:0 0 8px;font-size:28px}
 .section-head p{margin:0;color:var(--muted)}
 
+/* Product grid */
 .grid{
   margin-top:18px;
   display:grid;gap:16px;
@@ -122,17 +135,7 @@ h1{font-size:44px;line-height:1.1;margin:0 0 12px}
 .card h3{margin:14px 14px 6px}
 .card p{margin:0 14px 16px;color:var(--muted);font-size:14px;line-height:1.5}
 
-.note{
-  margin-top:18px;
-  padding:14px 16px;
-  border:1px dashed var(--line);
-  border-radius:14px;
-  background:#fff;
-  color:var(--muted);
-  font-size:13px;
-}
-.note code{background:#f1f5ff;padding:2px 6px;border-radius:8px}
-
+/* Features */
 .features{
   margin-top:18px;
   display:grid;gap:16px;
@@ -145,6 +148,7 @@ h1{font-size:44px;line-height:1.1;margin:0 0 12px}
 .feature h4{margin:0 0 6px}
 .feature p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
 
+/* Contact */
 .contact{
   display:grid;gap:18px;
   grid-template-columns: 1fr 1fr;
@@ -172,6 +176,7 @@ textarea{
   margin-bottom:12px;
 }
 
+/* Footer */
 .footer{
   padding:22px 0;
   background:#0f172a;color:#e5e7eb;
@@ -179,6 +184,7 @@ textarea{
 .foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .footer .muted{color:#aab3c2}
 
+/* Responsive */
 @media (max-width: 980px){
   .hero-grid{grid-template-columns:1fr}
   .grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
