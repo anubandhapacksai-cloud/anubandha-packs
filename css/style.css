@@ -40,6 +40,7 @@ body{
   background:var(--accent);color:#fff;text-decoration:none;
   font-weight:800;border:1px solid rgba(0,0,0,.04);
   box-shadow:0 10px 25px rgba(37,99,235,.22);
+  transition:transform .15s ease;
 }
 .btn:hover{transform:translateY(-1px)}
 .btn-small{padding:10px 14px;border-radius:10px}
@@ -101,7 +102,7 @@ h1{font-size:44px;line-height:1.1;margin:0 0 12px}
 .card h3{margin:14px 14px 6px}
 .card p{margin:0 14px 16px;color:var(--muted);font-size:14px;line-height:1.5}
 
-/* Trusted By */
+/* ✅ Trusted By (FIXED) */
 .trusted{
   padding:60px 0;
   background:#ffffff;
@@ -110,22 +111,58 @@ h1{font-size:44px;line-height:1.1;margin:0 0 12px}
   text-align:center;
 }
 .trusted-title{font-size:26px;margin:0 0 26px}
-.logo-slider{overflow:hidden;position:relative;width:100%}
+
+.logo-slider{
+  overflow:hidden;
+  position:relative;
+  width:100%;
+  padding: 10px 0;
+}
+
+/* Optional fade edges for premium look */
+.logo-slider::before,
+.logo-slider::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0;
+  width:70px;
+  z-index:2;
+  pointer-events:none;
+}
+.logo-slider::before{
+  left:0;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0) 100%);
+}
+.logo-slider::after{
+  right:0;
+  background: linear-gradient(270deg, #ffffff 0%, rgba(255,255,255,0) 100%);
+}
+
 .logo-track{
   display:flex;
-  gap:40px;
-  width:max-content;
-  animation:scroll 22s linear infinite;
   align-items:center;
+  gap: 16px;              /* ✅ less gap */
+  width:max-content;
+  animation:scroll 18s linear infinite; /* ✅ a bit faster */
+  padding-right: 16px;
 }
+
+/* ✅ bigger + full color + clean */
 .logo-track img{
-  width:180px;height:80px;
-  object-fit:contain;
-  filter:grayscale(100%);
-  opacity:.85;
-  transition:.25s;
+  height: 78px;           /* ✅ bigger */
+  width: 180px;           /* ✅ bigger */
+  object-fit: contain;
+  filter: none;           /* ✅ remove black & white */
+  opacity: 1;
+  background: transparent;
+  border-radius: 12px;
 }
-.logo-track img:hover{filter:grayscale(0%);opacity:1}
+
+/* pause on hover */
+.logo-slider:hover .logo-track{
+  animation-play-state: paused;
+}
+
 @keyframes scroll{
   0%{transform:translateX(0)}
   100%{transform:translateX(-50%)}
@@ -211,8 +248,10 @@ textarea{
   .grid{grid-template-columns:repeat(2, minmax(0, 1fr))}
   .contact{grid-template-columns:1fr}
   h1{font-size:34px}
+  .logo-track img{width:160px;height:70px}
 }
 @media (max-width: 520px){
   .grid{grid-template-columns:1fr}
   .whatsapp-text{display:none}
+  .logo-track img{width:140px;height:64px}
 }
