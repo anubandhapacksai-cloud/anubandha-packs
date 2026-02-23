@@ -199,7 +199,7 @@ h1{
   animation:scroll 18s linear infinite;
 }
 .logo-track img{
-  width:180px;
+  width:50px;
   height:80px;
   object-fit:contain;
 }
