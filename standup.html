@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stand-up Zipper Pouches | Anubandha Packs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -12,7 +12,7 @@
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="images/rogo.jpg" class="logo">
+      <img src="images/rogo.jpg" class="logo" alt="Anubandha Packs Logo">
       <div class="brand-text">
         <strong>Anubandha Packs</strong>
         <span>Packaging Pouch Manufacturer</span>
@@ -23,6 +23,12 @@
       <a href="index.html#products">Products</a>
       <a href="index.html#trusted">Trusted By</a>
       <a href="index.html#contact">Contact</a>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="sun">☀</span>
+        <span class="moon">🌙</span>
+      </button>
+
       <a class="btn btn-small" href="index.html#contact">Request Quote</a>
     </nav>
   </div>
@@ -31,61 +37,119 @@
 <section class="section">
   <div class="container">
 
-    <a href="index.html#products" class="btn btn-ghost btn-small">← Back to Products</a>
+    <div class="back-row">
+      <a href="index.html#products" class="btn btn-ghost btn-small">← Back to Products</a>
+    </div>
 
-    <div class="product-detail" style="margin-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+    <div class="product-detail">
 
-      <div>
-        <img src="images/standup.jpg" style="width:100%; border-radius:20px;">
+      <!-- LEFT: Gallery slider -->
+      <div class="gallery">
+        <div class="gallery-main">
+          <button class="g-btn prev" id="prevBtn" aria-label="Previous image">‹</button>
+          <img id="mainImg" src="images/standup.jpg" alt="Stand-up zipper pouch">
+          <button class="g-btn next" id="nextBtn" aria-label="Next image">›</button>
+        </div>
+
+        <!-- thumbnails (you can replace with more real images later) -->
+        <div class="thumbs">
+          <button class="thumb active" data-src="images/standup.jpg">
+            <img src="images/standup.jpg" alt="Thumb 1">
+          </button>
+          <button class="thumb" data-src="images/standup.jpg">
+            <img src="images/standup.jpg" alt="Thumb 2">
+          </button>
+          <button class="thumb" data-src="images/standup.jpg">
+            <img src="images/standup.jpg" alt="Thumb 3">
+          </button>
+        </div>
       </div>
 
-      <div>
-        <h1>Stand-up Zipper Pouches</h1>
+      <!-- RIGHT: Product info -->
+      <div class="product-info">
+        <div class="kicker">Product Details</div>
+        <h1 class="product-title">Stand-up Zipper Pouches</h1>
+
         <p class="muted">
-          Ideal for dry fruits, coffee, snacks, and retail packaging.
-          Strong bottom support with zipper locking system.
+          Best for dry fruits, coffee, millets & snacks. Strong stand-up base with zipper closure.
+          Custom printing available.
         </p>
 
-        <h3>Available Sizes & Prices</h3>
+        <div class="product-tags">
+          <span class="pill">Low MOQ</span>
+          <span class="pill">Custom printing</span>
+          <span class="pill">Food grade</span>
+          <span class="pill">Matte / Gloss</span>
+        </div>
 
-        <table style="width:100%; border-collapse:collapse;">
-          <tr style="background:#f2f2f2;">
-            <th style="padding:10px;">Size</th>
-            <th>Capacity</th>
-            <th>MOQ</th>
-            <th>Price / pc</th>
-          </tr>
+        <div class="product-actions">
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20Stand-up%20Zipper%20Pouches.%20Please%20share%20sizes%20and%20pricing.">
+            WhatsApp Quote
+          </a>
+          <a class="btn btn-ghost" href="index.html#contact">Request via Form</a>
+        </div>
 
-          <tr>
-            <td style="padding:10px;">140 x 200 mm</td>
-            <td>250g</td>
-            <td>1000</td>
-            <td>₹ 6.50</td>
-          </tr>
+        <div class="note-box">
+          <strong>Note:</strong> Final price depends on thickness, printing coverage, zipper type and quantity.
+        </div>
+      </div>
 
-          <tr>
-            <td style="padding:10px;">160 x 240 mm</td>
-            <td>500g</td>
-            <td>1000</td>
-            <td>₹ 7.80</td>
-          </tr>
+    </div>
 
-          <tr>
-            <td style="padding:10px;">200 x 300 mm</td>
-            <td>1kg</td>
-            <td>1000</td>
-            <td>₹ 9.95</td>
-          </tr>
-        </table>
+    <!-- Pricing cards (replace rates with your exact list) -->
+    <div class="section-head" style="margin-top:26px;">
+      <h2>Sizes & Pricing</h2>
+      <p class="muted">Premium pricing cards (you can edit easily).</p>
+    </div>
 
-        <br>
-
-        <a class="btn"
-           href="https://wa.me/919591079347?text=Hi%20I%20need%20quotation%20for%20Standup%20Zipper%20Pouches"
-           target="_blank">
-           Get Quote on WhatsApp
+    <div class="price-cards">
+      <div class="price-card">
+        <div class="pc-top">
+          <strong>140mm x 200mm</strong>
+          <span class="pc-badge">250g</span>
+        </div>
+        <div class="pc-mid">
+          <div class="pc-row"><span>Material</span><span>3 Layer</span></div>
+          <div class="pc-row"><span>MOQ</span><span>1000</span></div>
+        </div>
+        <div class="pc-price">₹ 6.50 <span>/ pc</span></div>
+        <a class="btn btn-full" target="_blank" rel="noopener"
+           href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20Stand-up%20Zipper%20Pouches%20size%20140x200mm%20(250g).%20Please%20share%20price.">
+          Get this size
         </a>
+      </div>
 
+      <div class="price-card highlight">
+        <div class="pc-top">
+          <strong>160mm x 240mm</strong>
+          <span class="pc-badge">500g</span>
+        </div>
+        <div class="pc-mid">
+          <div class="pc-row"><span>Material</span><span>3 Layer</span></div>
+          <div class="pc-row"><span>MOQ</span><span>1000</span></div>
+        </div>
+        <div class="pc-price">₹ 7.80 <span>/ pc</span></div>
+        <a class="btn btn-full" target="_blank" rel="noopener"
+           href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20Stand-up%20Zipper%20Pouches%20size%20160x240mm%20(500g).%20Please%20share%20price.">
+          Get this size
+        </a>
+      </div>
+
+      <div class="price-card">
+        <div class="pc-top">
+          <strong>200mm x 300mm</strong>
+          <span class="pc-badge">1kg</span>
+        </div>
+        <div class="pc-mid">
+          <div class="pc-row"><span>Material</span><span>3 Layer</span></div>
+          <div class="pc-row"><span>MOQ</span><span>1000</span></div>
+        </div>
+        <div class="pc-price">₹ 9.95 <span>/ pc</span></div>
+        <a class="btn btn-full" target="_blank" rel="noopener"
+           href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20Stand-up%20Zipper%20Pouches%20size%20200x300mm%20(1kg).%20Please%20share%20price.">
+          Get this size
+        </a>
       </div>
     </div>
 
@@ -94,9 +158,47 @@
 
 <footer class="footer">
   <div class="container foot">
-    <span>© 2024 Anubandha Packs</span>
+    <span>© <span id="y"></span> Anubandha Packs</span>
+    <span class="muted">Stand-up Zipper Pouches</span>
   </div>
 </footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Dark mode (same logic as index)
+  const toggle = document.getElementById("themeToggle");
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") document.documentElement.classList.add("dark");
+  toggle.addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+  });
+
+  // Gallery slider
+  const thumbs = Array.from(document.querySelectorAll(".thumb"));
+  const mainImg = document.getElementById("mainImg");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let current = 0;
+  const sources = thumbs.map(t => t.dataset.src);
+
+  function setActive(index){
+    current = index;
+    mainImg.classList.add("fade");
+    setTimeout(() => {
+      mainImg.src = sources[current];
+      mainImg.classList.remove("fade");
+    }, 120);
+
+    thumbs.forEach((t,i) => t.classList.toggle("active", i === current));
+  }
+
+  thumbs.forEach((t,i) => t.addEventListener("click", () => setActive(i)));
+  prevBtn.addEventListener("click", () => setActive((current - 1 + sources.length) % sources.length));
+  nextBtn.addEventListener("click", () => setActive((current + 1) % sources.length));
+</script>
 
 </body>
 </html>
