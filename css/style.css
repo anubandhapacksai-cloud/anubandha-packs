@@ -185,28 +185,7 @@ h1{
 }
 .card h3{margin:14px}
 
-/* ================= TRUSTED ================= */
-.trusted{
-  padding:60px 0;
-  text-align:center;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-}
-.logo-slider{overflow:hidden}
-.logo-track{
-  display:flex;
-  gap:16px;
-  animation:scroll 18s linear infinite;
-}
-.logo-track img{
-  width:50px;
-  height:80px;
-  object-fit:contain;
-}
-@keyframes scroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
+
 
 /* ================= PRODUCT DETAIL PAGE ================= */
 .product-detail{
