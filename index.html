@@ -30,7 +30,7 @@
         <span class="moon">🌙</span>
       </button>
 
-      <a class="btn btn-small" href="#contact">Request Quote</a>
+      <button class="btn btn-small" id="openQuote2" type="button">Request Quote</button>
     </nav>
   </div>
 </header>
@@ -38,30 +38,24 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
+
     <div class="hero-left">
-      <div class="hero-left">
+      <div class="kicker">Premium Flexible Packaging</div>
 
-<div class="kicker">Premium Flexible Packaging</div>
+      <h1>Premium packaging pouches for brands that want a better shelf look.</h1>
 
-<h1>Premium packaging pouches for brands that want a better shelf look.</h1>
+      <p class="lead">
+        Stand-up zipper, spout, side gusset, flat pouches & more — with clean finishing and custom printing.
+      </p>
 
-<p class="lead">
-Stand-up zipper, spout, side gusset, flat pouches & more — with clean finishing and custom printing.
-</p>
+      <div class="hero-badges">
+        <div class="badge">Fast production</div>
+        <div class="badge">Low MOQ options</div>
+        <div class="badge">Pan-India delivery</div>
+      </div>
 
-<div class="hero-badges">
-<div class="badge">Fast production</div>
-<div class="badge">Low MOQ options</div>
-<div class="badge">Pan-India delivery</div>
-</div>
-
-<div class="hero-cta">
-<button class="btn" id="openQuote">Get Quote</button>
-<a class="btn btn-ghost" href="#products">Browse Products</a>
-</div>
-
-</div>
-        <button class="btn" id="openQuote">Get Quote</button>
+      <div class="hero-cta">
+        <button class="btn" id="openQuote" type="button">Get Quote</button>
         <a class="btn btn-ghost" href="#products">Browse Products</a>
       </div>
 
@@ -81,6 +75,7 @@ Stand-up zipper, spout, side gusset, flat pouches & more — with clean finishin
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -92,7 +87,6 @@ Stand-up zipper, spout, side gusset, flat pouches & more — with clean finishin
       <p>Catalog-style packaging solutions — simple, premium, and easy to choose.</p>
     </div>
 
-    <!-- Make cards clickable to product pages -->
     <div class="grid">
 
       <a class="card-linkwrap" href="standup.html">
@@ -121,7 +115,7 @@ Stand-up zipper, spout, side gusset, flat pouches & more — with clean finishin
 
       <a class="card-linkwrap" href="flat.html">
         <article class="card">
-          <img src="images/flat.jpg.jpg" alt="Flat pouches">
+          <img src="images/flat.jpg" alt="Flat pouches">
           <h3>Flat Pouches</h3>
           <p>Cost-effective pouches for single-serve and compact packing.</p>
         </article>
@@ -143,6 +137,28 @@ Stand-up zipper, spout, side gusset, flat pouches & more — with clean finishin
         </article>
       </a>
 
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BY -->
+<section id="trusted" class="trusted">
+  <div class="container">
+    <h2 class="trusted-title">Trusted by Our Clients</h2>
+
+    <div class="logo-slider">
+      <div class="logo-track">
+        <img src="images/client1.jpg" alt="Client 1" loading="lazy">
+        <img src="images/client2.jpg" alt="Client 2" loading="lazy">
+        <img src="images/client3.jpg" alt="Client 3" loading="lazy">
+        <img src="images/client4.jpg" alt="Client 4" loading="lazy">
+
+        <!-- duplicate for smooth loop -->
+        <img src="images/client1.jpg" alt="Client 1 duplicate" loading="lazy">
+        <img src="images/client2.jpg" alt="Client 2 duplicate" loading="lazy">
+        <img src="images/client3.jpg" alt="Client 3 duplicate" loading="lazy">
+        <img src="images/client4.jpg" alt="Client 4 duplicate" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -171,7 +187,7 @@ Delivery location:
 Thank you.</textarea>
 
       <a class="btn btn-full"
-         href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
+         href="https://wa.me/919535466394?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
          target="_blank" rel="noopener">
         Send on WhatsApp
       </a>
@@ -187,7 +203,7 @@ Thank you.</textarea>
 </footer>
 
 <!-- PREMIUM FLOATING WHATSAPP -->
-<a href="https://wa.me/919591079347?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
+<a href="https://wa.me/919535466394?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
    class="whatsapp-container"
    target="_blank" aria-label="Chat on WhatsApp" rel="noopener">
   <span class="whatsapp-text">Chat With Us</span>
@@ -196,33 +212,6 @@ Thank you.</textarea>
   </div>
 </a>
 
-<script>
-  // year
-  document.getElementById("y").textContent = new Date().getFullYear();
-
-  // Animated hero word
-  const heroWord = document.getElementById("heroWord");
-  const words = ["premium", "modern", "trusted", "powerful"];
-  let i = 0;
-  setInterval(() => {
-    i = (i + 1) % words.length;
-    heroWord.classList.add("swap");
-    setTimeout(() => {
-      heroWord.textContent = words[i];
-      heroWord.classList.remove("swap");
-    }, 180);
-  }, 1500);
-
-  // Dark mode toggle
-  const toggle = document.getElementById("themeToggle");
-  const saved = localStorage.getItem("theme");
-  if (saved === "dark") document.documentElement.classList.add("dark");
-
-  toggle.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
-  });
-</script>
 <!-- QUOTE MODAL -->
 <div class="modal" id="quoteModal" aria-hidden="true">
   <div class="modal-backdrop" data-close="1"></div>
@@ -233,18 +222,15 @@ Thank you.</textarea>
       <button class="icon-btn" id="quoteClose" aria-label="Close">✕</button>
     </div>
 
-    <!-- Progress -->
     <div class="progress">
       <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Steps -->
     <div class="steps">
 
-      <!-- Step 1: Pouch type -->
       <div class="step active" data-step="1">
         <p class="step-title">Select pouch type</p>
-        <div class="options" id="pouchOptions">
+        <div class="options">
           <button class="opt" data-value="Standup Zipper Pouch">Standup Zipper Pouch</button>
           <button class="opt" data-value="Standup without zipper pouch">Standup without zipper pouch</button>
           <button class="opt" data-value="Center seal pouch">Center seal pouch</button>
@@ -255,7 +241,6 @@ Thank you.</textarea>
         </div>
       </div>
 
-      <!-- Step 2: Plain/Printed -->
       <div class="step" data-step="2">
         <p class="step-title">Plain or Printed?</p>
         <div class="options">
@@ -264,19 +249,16 @@ Thank you.</textarea>
         </div>
       </div>
 
-      <!-- Step 3: Size -->
       <div class="step" data-step="3">
         <p class="step-title">Enter size (W × H)</p>
         <input class="input" id="sizeInput" placeholder='Example: 6" × 9" or 150mm × 230mm'>
       </div>
 
-      <!-- Step 4: Quantity -->
       <div class="step" data-step="4">
         <p class="step-title">Enter quantity</p>
         <input class="input" id="qtyInput" type="number" min="1" placeholder="Example: 5000">
       </div>
 
-      <!-- Step 5: Contact -->
       <div class="step" data-step="5">
         <p class="step-title">Your contact details</p>
         <div class="two-col">
@@ -286,7 +268,6 @@ Thank you.</textarea>
         <input class="input" id="cityInput" placeholder="Delivery city/location">
       </div>
 
-      <!-- Done -->
       <div class="step" data-step="6">
         <p class="step-title">Done ✅</p>
         <p class="muted">We received your request. We’ll respond soon.</p>
@@ -294,32 +275,189 @@ Thank you.</textarea>
 
     </div>
 
-    <!-- Footer buttons -->
     <div class="modal-actions">
-      <button class="btn btn-ghost" id="backBtn" disabled>Back</button>
-      <button class="btn" id="nextBtn" disabled>Next</button>
+      <button class="btn btn-ghost" id="backBtn" disabled type="button">Back</button>
+      <button class="btn" id="nextBtn" disabled type="button">Next</button>
     </div>
   </div>
 </div>
-  <script>
 
-// footer year
-document.getElementById("y").textContent = new Date().getFullYear();
+<script>
+  // footer year
+  const yEl = document.getElementById("y");
+  if (yEl) yEl.textContent = new Date().getFullYear();
 
-// open quote popup
-const openQuoteBtn = document.getElementById("openQuote");
-const quoteModal = document.getElementById("quoteModal");
+  // dark mode
+  const toggle = document.getElementById("themeToggle");
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") document.documentElement.classList.add("dark");
 
-openQuoteBtn.addEventListener("click", function() {
-  quoteModal.classList.add("show");
-});
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        document.documentElement.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+  }
 
-// close popup
-const closeBtn = document.getElementById("quoteClose");
+  // ===== Quote Modal Wizard =====
+  const modal = document.getElementById("quoteModal");
+  const openBtn = document.getElementById("openQuote");
+  const openBtn2 = document.getElementById("openQuote2");
+  const closeBtn = document.getElementById("quoteClose");
+  const backBtn = document.getElementById("backBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const progressBar = document.getElementById("progressBar");
+  const steps = modal ? [...modal.querySelectorAll(".step")] : [];
 
-closeBtn.addEventListener("click", function() {
-  quoteModal.classList.remove("show");
-});
+  let step = 1;
+  const formData = {
+    pouchType: "",
+    printing: "",
+    size: "",
+    quantity: "",
+    name: "",
+    phone: "",
+    city: ""
+  };
+
+  function setSelected(btn) {
+    const wrap = btn.parentElement;
+    wrap.querySelectorAll(".opt").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+  }
+
+  function validateStep() {
+    const sizeInput = document.getElementById("sizeInput");
+    const qtyInput = document.getElementById("qtyInput");
+    const nameInput = document.getElementById("nameInput");
+    const phoneInput = document.getElementById("phoneInput");
+
+    if (step === 1) return !!formData.pouchType;
+    if (step === 2) return !!formData.printing;
+    if (step === 3) return sizeInput && sizeInput.value.trim().length >= 3;
+    if (step === 4) return qtyInput && Number(qtyInput.value) > 0;
+    if (step === 5) return (
+      nameInput && nameInput.value.trim().length >= 2 &&
+      phoneInput && phoneInput.value.trim().length >= 10
+    );
+    return true;
+  }
+
+  function render() {
+    steps.forEach(s => s.classList.remove("active"));
+    const active = modal.querySelector(`.step[data-step="${step}"]`);
+    if (active) active.classList.add("active");
+
+    backBtn.disabled = step === 1;
+    nextBtn.textContent = (step === 5) ? "Submit" : "Next";
+    nextBtn.disabled = !validateStep();
+
+    const pct = Math.min(100, ((step - 1) / 5) * 100);
+    progressBar.style.width = pct + "%";
+  }
+
+  function openModal() {
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+    step = 1;
+
+    // reset selections + inputs
+    modal.querySelectorAll(".opt").forEach(b => b.classList.remove("selected"));
+    ["sizeInput","qtyInput","nameInput","phoneInput","cityInput"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = "";
+    });
+    Object.keys(formData).forEach(k => formData[k] = "");
+
+    render();
+  }
+
+  function closeModal() {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  if (openBtn) openBtn.addEventListener("click", openModal);
+  if (openBtn2) openBtn2.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
+  });
+
+  // option clicks
+  modal.addEventListener("click", (e) => {
+    const opt = e.target.closest(".opt");
+    if (!opt) return;
+
+    if (step === 1) {
+      formData.pouchType = opt.dataset.value || "";
+      setSelected(opt);
+    }
+
+    if (step === 2 && opt.dataset.field === "printing") {
+      formData.printing = opt.dataset.value || "";
+      setSelected(opt);
+    }
+
+    render();
+  });
+
+  // input listeners
+  ["sizeInput","qtyInput","nameInput","phoneInput","cityInput"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", render);
+  });
+
+  backBtn.addEventListener("click", () => {
+    if (step > 1) step--;
+    render();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (!validateStep()) return;
+
+    const sizeInput = document.getElementById("sizeInput");
+    const qtyInput = document.getElementById("qtyInput");
+    const nameInput = document.getElementById("nameInput");
+    const phoneInput = document.getElementById("phoneInput");
+    const cityInput = document.getElementById("cityInput");
+
+    if (step === 3) formData.size = sizeInput.value.trim();
+    if (step === 4) formData.quantity = qtyInput.value.trim();
+
+    if (step === 5) {
+      formData.name = nameInput.value.trim();
+      formData.phone = phoneInput.value.trim();
+      formData.city = cityInput.value.trim();
+
+      const msg =
+`Hi Anubandha Packs, I need quotation:
+Pouch type: ${formData.pouchType}
+Plain/Printed: ${formData.printing}
+Size: ${formData.size}
+Quantity: ${formData.quantity}
+Name: ${formData.name}
+Phone: ${formData.phone}
+Location: ${formData.city}`;
+
+      const wa = "https://wa.me/919535466394?text=" + encodeURIComponent(msg);
+      window.open(wa, "_blank");
+
+      step = 6;
+      render();
+      return;
+    }
+
+    step++;
+    render();
+  });
+
+  render();
 </script>
+
 </body>
 </html>
