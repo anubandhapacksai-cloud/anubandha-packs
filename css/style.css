@@ -239,3 +239,34 @@ grid-template-columns:1fr;
 }
 
 }
+/* HOLI FESTIVAL BACKGROUND */
+
+.festival{
+background:
+radial-gradient(circle at 20% 20%,rgba(255,0,128,.2),transparent),
+radial-gradient(circle at 80% 30%,rgba(0,200,255,.2),transparent),
+radial-gradient(circle at 40% 90%,rgba(255,200,0,.2),transparent);
+}
+
+/* HOLI CONFETTI */
+
+.holi-confetti{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.holi-confetti span{
+position:absolute;
+width:8px;
+height:8px;
+border-radius:50%;
+opacity:.5;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+from{transform:translateY(-10vh)}
+to{transform:translateY(110vh)}
+}
