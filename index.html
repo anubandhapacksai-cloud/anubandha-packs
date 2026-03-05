@@ -435,19 +435,9 @@ Thank you.</textarea>
         console.log("Email failed", err);
       });
 
-      // ✅ SEND WHATSAPP
-      const msg =
-`Hi Anubandha Packs, I need quotation:
-Pouch type: ${formData.pouchType}
-Plain/Printed: ${formData.printing}
-Size: ${formData.size}
-Quantity: ${formData.quantity}
-Name: ${formData.name}
-Phone: ${formData.phone}
-Location: ${formData.city}`;
-
-      const wa = "https://wa.me/919535466394?text=" + encodeURIComponent(msg);
-      window.open(wa, "_blank");
+     // WhatsApp disabled
+// const wa = "https://wa.me/919535466394?text=" + encodeURIComponent(msg);
+// window.open(wa, "_blank");
 
       step = 6;
       render();
