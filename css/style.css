@@ -182,14 +182,37 @@ transition:.3s;
 opacity:1;
 }
 
-/* HOLI FESTIVAL BACKGROUND */
 
-.festival{
+/* HOLI FESTIVAL OVERLAY */
+
+.festival-overlay{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:1;
+
 background:
-radial-gradient(circle at 20% 20%,rgba(255,0,128,.2),transparent),
-radial-gradient(circle at 80% 30%,rgba(0,200,255,.2),transparent),
-radial-gradient(circle at 40% 90%,rgba(255,200,0,.2),transparent);
+
+radial-gradient(700px 360px at 10% 10%, rgba(255,0,128,.25), transparent),
+
+radial-gradient(700px 360px at 90% 20%, rgba(0,200,255,.25), transparent),
+
+radial-gradient(700px 360px at 40% 90%, rgba(255,200,0,.25), transparent),
+
+radial-gradient(700px 360px at 70% 70%, rgba(0,255,160,.25), transparent);
+
+animation:holiAnimation 6s infinite alternate;
+
 }
+
+@keyframes holiAnimation{
+
+0%{filter:hue-rotate(0deg)}
+
+100%{filter:hue-rotate(40deg)}
+
+}
+
 
 /* HOLI CONFETTI */
 
@@ -198,21 +221,30 @@ position:fixed;
 inset:0;
 pointer-events:none;
 overflow:hidden;
+z-index:2;
 }
 
 .holi-confetti span{
 position:absolute;
-width:8px;
-height:8px;
+width:10px;
+height:10px;
 border-radius:50%;
-opacity:.5;
+opacity:.35;
 animation:fall linear infinite;
 }
 
 @keyframes fall{
-from{transform:translateY(-10vh)}
-to{transform:translateY(110vh)}
+
+from{
+transform:translateY(-10vh)
 }
+
+to{
+transform:translateY(110vh)
+}
+
+}
+
 
 /* RESPONSIVE */
 
@@ -238,35 +270,4 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 }
 
-}
-/* HOLI FESTIVAL BACKGROUND */
-
-.festival{
-background:
-radial-gradient(circle at 20% 20%,rgba(255,0,128,.2),transparent),
-radial-gradient(circle at 80% 30%,rgba(0,200,255,.2),transparent),
-radial-gradient(circle at 40% 90%,rgba(255,200,0,.2),transparent);
-}
-
-/* HOLI CONFETTI */
-
-.holi-confetti{
-position:fixed;
-inset:0;
-pointer-events:none;
-overflow:hidden;
-}
-
-.holi-confetti span{
-position:absolute;
-width:8px;
-height:8px;
-border-radius:50%;
-opacity:.5;
-animation:fall linear infinite;
-}
-
-@keyframes fall{
-from{transform:translateY(-10vh)}
-to{transform:translateY(110vh)}
 }
