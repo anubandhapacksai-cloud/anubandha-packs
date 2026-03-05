@@ -223,6 +223,83 @@ Thank you.</textarea>
     localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
   });
 </script>
+<!-- QUOTE MODAL -->
+<div class="modal" id="quoteModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="1"></div>
 
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+    <div class="modal-head">
+      <h3 id="quoteTitle">Request a Quote</h3>
+      <button class="icon-btn" id="quoteClose" aria-label="Close">✕</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Steps -->
+    <div class="steps">
+
+      <!-- Step 1: Pouch type -->
+      <div class="step active" data-step="1">
+        <p class="step-title">Select pouch type</p>
+        <div class="options" id="pouchOptions">
+          <button class="opt" data-value="Standup Zipper Pouch">Standup Zipper Pouch</button>
+          <button class="opt" data-value="Standup without zipper pouch">Standup without zipper pouch</button>
+          <button class="opt" data-value="Center seal pouch">Center seal pouch</button>
+          <button class="opt" data-value="Flat Bottom Pouch">Flat Bottom Pouch</button>
+          <button class="opt" data-value="Side Gusset Pouch">Side Gusset Pouch</button>
+          <button class="opt" data-value="Spout Pouch">Spout Pouch</button>
+          <button class="opt" data-value="3 Side seal pouch">3 Side seal pouch</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Plain/Printed -->
+      <div class="step" data-step="2">
+        <p class="step-title">Plain or Printed?</p>
+        <div class="options">
+          <button class="opt" data-field="printing" data-value="Plain">Plain</button>
+          <button class="opt" data-field="printing" data-value="Printed">Printed</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Size -->
+      <div class="step" data-step="3">
+        <p class="step-title">Enter size (W × H)</p>
+        <input class="input" id="sizeInput" placeholder='Example: 6" × 9" or 150mm × 230mm'>
+      </div>
+
+      <!-- Step 4: Quantity -->
+      <div class="step" data-step="4">
+        <p class="step-title">Enter quantity</p>
+        <input class="input" id="qtyInput" type="number" min="1" placeholder="Example: 5000">
+      </div>
+
+      <!-- Step 5: Contact -->
+      <div class="step" data-step="5">
+        <p class="step-title">Your contact details</p>
+        <div class="two-col">
+          <input class="input" id="nameInput" placeholder="Full name">
+          <input class="input" id="phoneInput" placeholder="Phone / WhatsApp number">
+        </div>
+        <input class="input" id="cityInput" placeholder="Delivery city/location">
+      </div>
+
+      <!-- Done -->
+      <div class="step" data-step="6">
+        <p class="step-title">Done ✅</p>
+        <p class="muted">We received your request. We’ll respond soon.</p>
+      </div>
+
+    </div>
+
+    <!-- Footer buttons -->
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="backBtn" disabled>Back</button>
+      <button class="btn" id="nextBtn" disabled>Next</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
