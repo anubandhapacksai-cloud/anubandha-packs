@@ -455,3 +455,230 @@ cursor:pointer;
 background:linear-gradient(145deg,#111827,#1f2937);
 
 }
+/* ================= BEAUTY + POWER UPGRADE (paste at END) ================= */
+
+/* Font (optional but recommended) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+
+:root{
+  --radius: 20px;
+  --shadow-sm: 0 10px 25px rgba(2,6,23,.06);
+  --shadow-md: 0 18px 45px rgba(2,6,23,.12);
+  --shadow-lg: 0 30px 80px rgba(2,6,23,.18);
+  --glass: rgba(255,255,255,.65);
+  --glass-dark: rgba(15,18,28,.68);
+  --ring: 0 0 0 4px rgba(37,99,235,.18);
+
+  /* Accent gradient */
+  --accent2: #06b6d4;
+  --accent3: #7c3aed;
+}
+
+body{
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: .1px;
+}
+
+/* Smooth scrolling */
+html{ scroll-behavior:smooth; }
+
+/* Better container rhythm */
+.section{ padding: 56px 0; }
+
+/* ================= HEADER UPGRADE ================= */
+.site-header{
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(2,6,23,.04);
+}
+.nav{ padding: 14px 0; }
+.menu a{
+  position: relative;
+  font-weight: 900;
+  opacity: .9;
+}
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:-8px;
+  width:0%;
+  height:3px;
+  border-radius:999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition:.25s ease;
+}
+.menu a:hover::after{ width:100%; }
+
+/* Theme toggle nicer */
+.theme-toggle{
+  transition:.2s ease;
+}
+.theme-toggle:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ================= HERO UPGRADE ================= */
+.hero{
+  padding: 74px 0 48px;
+  background:
+    radial-gradient(900px 450px at 10% 0%, rgba(6,182,212,.18), transparent),
+    radial-gradient(900px 450px at 90% 10%, rgba(124,58,237,.14), transparent),
+    radial-gradient(600px 400px at 50% 90%, rgba(37,99,235,.10), transparent),
+    linear-gradient(#fff, var(--bg));
+}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.6);
+  box-shadow: var(--shadow-sm);
+}
+.kicker::before{
+  content:"⚡";
+  font-size: 14px;
+}
+h1{
+  font-size: clamp(32px, 3.3vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+}
+.lead{
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* CTA buttons more premium */
+.btn{
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 18px 45px rgba(37,99,235,.22);
+}
+.btn:hover{
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+}
+.btn:active{
+  transform: translateY(0px);
+}
+.btn-ghost{
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(10px);
+}
+.dark .btn-ghost{
+  background: rgba(255,255,255,.06);
+}
+
+/* Hero badges look cleaner */
+.badge, .pill{
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(2,6,23,.06);
+}
+
+/* Hero card premium */
+.hero-card{
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: calc(var(--radius) + 2px);
+  background: linear-gradient(135deg, rgba(37,99,235,.35), rgba(6,182,212,.25), rgba(124,58,237,.22));
+  z-index:-1;
+  filter: blur(10px);
+  opacity:.55;
+}
+.hero-card img{
+  transition: transform .55s ease;
+}
+.hero-card:hover img{
+  transform: scale(1.04);
+}
+
+/* ================= PRODUCT GRID UPGRADE ================= */
+.grid{ gap: 18px; }
+.card{
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(600px 220px at 20% 0%, rgba(6,182,212,.10), transparent),
+              radial-gradient(600px 220px at 80% 0%, rgba(124,58,237,.08), transparent);
+  opacity: 0;
+  transition:.25s ease;
+  pointer-events:none;
+}
+.card:hover::after{ opacity: 1; }
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card title stronger */
+.card h3{
+  margin: 14px 14px 8px;
+  letter-spacing: -0.2px;
+}
+.card p{
+  margin: 0 14px 16px;
+  line-height: 1.5;
+}
+
+/* ================= CONTACT UPGRADE ================= */
+.contact-box, .form{
+  box-shadow: var(--shadow-sm);
+}
+textarea:focus{
+  outline:none;
+  box-shadow: var(--ring);
+  border-color: rgba(37,99,235,.35);
+}
+
+/* ================= WHATSAPP UPGRADE ================= */
+.whatsapp-icon{
+  box-shadow: 0 22px 60px rgba(0,0,0,.20);
+  transition: transform .2s ease;
+}
+.whatsapp-container:hover .whatsapp-icon{
+  transform: translateY(-2px);
+}
+.whatsapp-text{
+  box-shadow: var(--shadow-sm);
+}
+
+/* ================= MODAL UPGRADE ================= */
+.modal-card{
+  background: var(--glass-dark);
+  border: 1px solid rgba(255,255,255,0.16);
+}
+.progress-bar{
+  background: linear-gradient(90deg, var(--accent2), var(--accent), var(--accent3));
+}
+.opt:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+.input:focus{
+  box-shadow: var(--ring);
+  border-color: rgba(89,194,255,0.55);
+}
+
+/* ================= DARK MODE TWEAKS ================= */
+.dark .kicker{ background: rgba(255,255,255,.06); }
+.dark .btn{ box-shadow: 0 18px 55px rgba(79,140,255,.18); }
+.dark .card{ box-shadow: 0 12px 35px rgba(0,0,0,.35); }
+.dark .site-header{ box-shadow: 0 10px 30px rgba(0,0,0,.22); }
+
+/* Accessibility */
+.btn:focus, .opt:focus, .theme-toggle:focus, .icon-btn:focus{
+  outline:none;
+  box-shadow: var(--ring);
+}
