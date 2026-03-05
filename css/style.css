@@ -233,42 +233,6 @@ h1{
 .card h3{margin:14px}
 .card p{margin:0 14px 14px;color:var(--muted);font-weight:650}
 
-/* ================= TRUSTED BY ================= */
-.trusted{
-  padding:44px 0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  background: rgba(255,255,255,0.4);
-}
-.dark .trusted{background: rgba(255,255,255,0.03)}
-.trusted-title{margin:0 0 14px}
-
-.logo-slider{
-  overflow:hidden;
-  border-radius:var(--radius);
-  border:1px solid var(--line);
-  background: rgba(0,0,0,0.04);
-}
-.logo-track{
-  display:flex;
-  gap:28px;
-  align-items:center;
-  padding:18px 22px;
-  width:max-content;
-  animation: scroll 18s linear infinite;
-}
-.logo-track img{
-  height:46px;
-  width:auto;
-  opacity:0.9;
-  filter:grayscale(100%);
-}
-.logo-track img:hover{filter:grayscale(0%);opacity:1}
-@keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
-}
-
 /* ================= CONTACT ================= */
 .contact{
   display:grid;
