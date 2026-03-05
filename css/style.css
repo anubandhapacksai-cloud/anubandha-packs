@@ -1,273 +1,250 @@
 :root{
---bg:#f6f8fb;
---card:#ffffff;
---text:#0f172a;
---muted:#5b667a;
---accent:#2563eb;
---radius:18px;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#5b667a;
+  --accent:#2563eb;
+  --radius:18px;
 }
 
+*{box-sizing:border-box}
 body{
-margin:0;
-font-family:system-ui;
-background:var(--bg);
-color:var(--text);
+  margin:0;
+  font-family:system-ui;
+  background:var(--bg);
+  color:var(--text);
 }
-
+img{max-width:100%;display:block}
 .container{
-width:min(1100px,92%);
-margin:auto;
+  width:min(1100px,92%);
+  margin:auto;
 }
 
 /* HEADER */
-
 .site-header{
-background:white;
-border-bottom:1px solid #eee;
+  background:white;
+  border-bottom:1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
-
 .nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 0;
+  gap:16px;
 }
-
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+  color:inherit;
+}
+.brand-text span{color:var(--muted);font-size:12px}
 .menu{
-display:flex;
-gap:20px;
-align-items:center;
+  display:flex;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
 }
-
+.menu a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:700;
+}
 .logo{
-width:40px;
-border-radius:10px;
+  width:40px;
+  border-radius:10px;
 }
 
 /* BUTTONS */
-
 .btn{
-background:var(--accent);
-color:white;
-padding:12px 18px;
-border-radius:12px;
-border:none;
-cursor:pointer;
-font-weight:700;
+  background:var(--accent);
+  color:white;
+  padding:12px 18px;
+  border-radius:12px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:.2s ease;
 }
-
+.btn:hover{transform:translateY(-2px)}
 .btn-ghost{
-background:transparent;
-border:1px solid #ddd;
-color:black;
+  background:transparent;
+  border:1px solid #ddd;
+  color:black;
 }
-
-.btn-small{
-padding:8px 12px;
-}
-
-.btn-full{
-width:100%;
-}
+.btn-small{padding:8px 12px}
+.btn-full{width:100%}
 
 /* HERO */
-
-.hero{
-padding:70px 0;
-}
-
+.hero{padding:70px 0}
 .hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
 }
-
-.hero-card img{
-width:100%;
-border-radius:18px;
+.kicker{color:var(--accent);font-weight:900}
+h1{font-size:42px;line-height:1.1;margin:10px 0}
+.lead{color:var(--muted)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.badge{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid #e5e7eb;
+  background:#fff;
+  font-weight:800;
+  color:var(--muted);
+  font-size:12px;
 }
+.hero-card img{width:100%;border-radius:18px}
+.hero-card-text{padding:12px}
+.hero-card-text span{color:var(--muted);display:block;margin-top:6px}
 
 /* PRODUCTS */
-
-.section{
-padding:60px 0;
-}
-
+.section{padding:60px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.section-head p{color:var(--muted);margin:0}
 .grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:18px;
 }
-
 .card{
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.05);
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+  transition:.25s ease;
 }
-
+.card:hover{transform:translateY(-4px)}
 .card img{
-width:100%;
-height:180px;
-object-fit:cover;
+  width:100%;
+  height:180px;
+  object-fit:cover;
 }
-
-.card h3{
-margin:10px;
-}
+.card h3{margin:10px}
+.card p{margin:0 10px 14px;color:var(--muted)}
 
 /* CONTACT */
-
 .contact{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
-
 .contact-box,.form{
-background:white;
-padding:20px;
-border-radius:18px;
+  background:white;
+  padding:20px;
+  border-radius:18px;
 }
-
 textarea{
-width:100%;
-padding:10px;
-border-radius:10px;
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
 }
 
 /* FOOTER */
-
 .footer{
-background:#111827;
-color:white;
-padding:20px 0;
-text-align:center;
+  background:#111827;
+  color:white;
+  padding:20px 0;
+  text-align:center;
 }
+.foot{display:flex;justify-content:center}
 
 /* WHATSAPP FLOAT */
-
 .whatsapp-container{
-position:fixed;
-bottom:20px;
-right:20px;
-display:flex;
-gap:10px;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  gap:10px;
+  z-index:999;
+  text-decoration:none;
+  align-items:center;
 }
-
 .whatsapp-icon{
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
-.whatsapp-icon img{
-width:30px;
-}
-
+.whatsapp-icon img{width:30px}
 .whatsapp-text{
-background:white;
-padding:10px;
-border-radius:30px;
-font-weight:700;
-opacity:0;
-transition:.3s;
+  background:white;
+  padding:10px;
+  border-radius:30px;
+  font-weight:700;
+  opacity:0;
+  transition:.3s;
+  color:#0f172a;
 }
+.whatsapp-container:hover .whatsapp-text{opacity:1}
 
-.whatsapp-container:hover .whatsapp-text{
-opacity:1;
-}
+/* ================= HOLI / HOLY FESTIVAL SPECIAL ================= */
 
-
-/* HOLI FESTIVAL OVERLAY */
-
+/* Animated overlay (always visible) */
 .festival-overlay{
-position:fixed;
-inset:0;
-pointer-events:none;
-z-index:1;
-
-background:
-
-radial-gradient(700px 360px at 10% 10%, rgba(255,0,128,.25), transparent),
-
-radial-gradient(700px 360px at 90% 20%, rgba(0,200,255,.25), transparent),
-
-radial-gradient(700px 360px at 40% 90%, rgba(255,200,0,.25), transparent),
-
-radial-gradient(700px 360px at 70% 70%, rgba(0,255,160,.25), transparent);
-
-animation:holiAnimation 6s infinite alternate;
-
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(700px 360px at 10% 10%, rgba(255, 0, 128, .26), transparent 60%),
+    radial-gradient(760px 380px at 90% 20%, rgba(0, 200, 255, .22), transparent 60%),
+    radial-gradient(760px 380px at 40% 90%, rgba(255, 200, 0, .22), transparent 60%),
+    radial-gradient(520px 260px at 70% 70%, rgba(0, 255, 160, .18), transparent 60%);
+  animation: holiHue 6s ease-in-out infinite alternate;
+  mix-blend-mode: multiply;
+  opacity: .9;
+}
+@keyframes holiHue{
+  0%   { filter: hue-rotate(0deg); transform: scale(1); }
+  100% { filter: hue-rotate(45deg); transform: scale(1.02); }
 }
 
-@keyframes holiAnimation{
+/* Keep content above overlay */
+header, section, footer{ position: relative; z-index: 2; }
 
-0%{filter:hue-rotate(0deg)}
-
-100%{filter:hue-rotate(40deg)}
-
-}
-
-
-/* HOLI CONFETTI */
-
+/* Holi confetti */
 .holi-confetti{
-position:fixed;
-inset:0;
-pointer-events:none;
-overflow:hidden;
-z-index:2;
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:3;
 }
-
 .holi-confetti span{
-position:absolute;
-width:10px;
-height:10px;
-border-radius:50%;
-opacity:.35;
-animation:fall linear infinite;
+  position:absolute;
+  border-radius:50%;
+  opacity:.35;
+  animation:fall linear infinite;
 }
-
 @keyframes fall{
-
-from{
-transform:translateY(-10vh)
+  from{ transform: translateY(-12vh) translateX(0); }
+  to{ transform: translateY(112vh) translateX(80px); }
 }
-
-to{
-transform:translateY(110vh)
-}
-
-}
-
 
 /* RESPONSIVE */
-
 @media(max-width:900px){
-
-.hero-grid{
-grid-template-columns:1fr;
+  .hero-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .contact{grid-template-columns:1fr}
 }
-
-.grid{
-grid-template-columns:1fr 1fr;
-}
-
-.contact{
-grid-template-columns:1fr;
-}
-
-}
-
 @media(max-width:500px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
+  .grid{grid-template-columns:1fr}
+  .whatsapp-text{display:none}
 }
