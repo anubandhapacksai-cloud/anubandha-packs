@@ -301,5 +301,25 @@ Thank you.</textarea>
     </div>
   </div>
 </div>
+  <script>
+
+// footer year
+document.getElementById("y").textContent = new Date().getFullYear();
+
+// open quote popup
+const openQuoteBtn = document.getElementById("openQuote");
+const quoteModal = document.getElementById("quoteModal");
+
+openQuoteBtn.addEventListener("click", function() {
+  quoteModal.classList.add("show");
+});
+
+// close popup
+const closeBtn = document.getElementById("quoteClose");
+
+closeBtn.addEventListener("click", function() {
+  quoteModal.classList.remove("show");
+});
+</script>
 </body>
 </html>
