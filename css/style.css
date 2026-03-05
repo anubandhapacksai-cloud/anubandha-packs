@@ -383,3 +383,75 @@ textarea{
   .two-col{ grid-template-columns: 1fr; }
   .modal-card{ margin: 18px auto; }
 }
+html{
+scroll-behavior:smooth;
+}
+/* Gradient heading */
+
+.gradient-text{
+background:linear-gradient(90deg,#2563eb,#0ea5e9,#7c5cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* Floating hero image */
+
+.hero-card{
+animation:floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+100%{transform:translateY(0)}
+
+}
+
+/* Better hover cards */
+
+.card:hover{
+
+transform:translateY(-6px) scale(1.02);
+
+box-shadow:0 20px 45px rgba(37,99,235,.25);
+
+}
+/* Sticky quote button */
+
+.sticky-quote{
+
+position:fixed;
+
+left:20px;
+
+bottom:20px;
+
+background:#2563eb;
+
+color:white;
+
+padding:14px 18px;
+
+border-radius:30px;
+
+font-weight:900;
+
+box-shadow:0 10px 25px rgba(37,99,235,.4);
+
+z-index:999;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+
+/* Premium modal look */
+
+.modal-card{
+
+background:linear-gradient(145deg,#111827,#1f2937);
+
+}
