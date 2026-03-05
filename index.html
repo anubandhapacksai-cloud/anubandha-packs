@@ -1,192 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Anubandha Packs | Premium Packaging Pouches</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anubandha Packs | Premium Packaging Pouches</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="festival">
 
-<div class="festival-overlay"></div>
-
-<header class="site-header">
-
-<div class="container nav">
-
-<a class="brand" href="#">
-<img src="images/rogo.jpg" class="logo">
-<div class="brand-text">
-<strong>Anubandha Packs</strong>
-<span>Packaging Pouch Manufacturer</span>
-</div>
-</a>
-
-<nav class="menu">
-<a href="#products">Products</a>
-<a href="#contact">Contact</a>
-<button class="btn btn-small">Request Quote</button>
-</nav>
-
-</div>
-
-</header>
-
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container hero-grid">
-
-<div class="hero-left">
-
-<div class="kicker">Premium Flexible Packaging</div>
-
-<h1>Packaging pouches that make your brand look premium.</h1>
-
-<p class="lead">
-Stand-up zipper, spout, side gusset, flat pouches and more —
-with clean finishing and custom printing options.
-</p>
-
-<div class="hero-badges">
-
-<div class="badge">Fast Production</div>
-<div class="badge">Low MOQ</div>
-<div class="badge">Pan India Delivery</div>
-
-</div>
-
-<div class="hero-cta">
-
-<a class="btn" href="#contact">Get Quote</a>
-<a class="btn btn-ghost" href="#products">Browse Products</a>
-
-</div>
-
-</div>
-
-
-<div class="hero-right">
-
-<div class="hero-card">
-
-<img src="images/standup.jpg">
-
-<div class="hero-card-text">
-
-<strong>Stand-up Zipper Pouches</strong>
-<span>Perfect for coffee, dry fruits & snacks</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- PRODUCTS -->
-
-<section id="products" class="section">
-
-<div class="container">
-
-<div class="section-head">
-
-<h2>Our Product Range</h2>
-<p>Premium packaging pouch solutions.</p>
-
-</div>
-
-<div class="grid">
-
-<article class="card">
-<img src="images/standup.jpg">
-<h3>Standup Zipper Pouch</h3>
-<p>Perfect for snacks and dry food.</p>
-</article>
-
-<article class="card">
-<img src="images/spout.jpg">
-<h3>Spout Pouch</h3>
-<p>Ideal for liquids and sauces.</p>
-</article>
-
-<article class="card">
-<img src="images/sidegusset.jpg">
-<h3>Side Gusset</h3>
-<p>Great for coffee and grains.</p>
-</article>
-
-<article class="card">
-<img src="images/flat.jpg">
-<h3>Flat Pouch</h3>
-<p>Best for single serve packs.</p>
-</article>
-
-<article class="card">
-<img src="images/centreseal.jpg">
-<h3>Centre Seal</h3>
-<p>Strong FMCG packaging.</p>
-</article>
-
-<article class="card">
-<img src="images/threeside.jpg">
-<h3>3 Side Seal</h3>
-<p>Perfect for samples.</p>
-</article>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="section">
-
-<div class="container contact">
-
-<div>
-
-<h2>Request Quote</h2>
-
-<p>Send pouch type, size and quantity.</p>
-
-<div class="contact-box">
-
-<strong>Phone / WhatsApp:</strong>
-
-<a href="tel:+919535466394">+91 95354 66394</a>
-
-</div>
-
-</div>
-
-
-<div class="form">
-
-<label>Copy message & send on WhatsApp</label>
-
-<textarea rows="8">
+  <!-- Holi animated overlay (adds color without changing your layout) -->
+  <div class="festival-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+
+      <a class="brand" href="#">
+        <img src="images/rogo.jpg" class="logo" alt="Anubandha Packs">
+        <div class="brand-text">
+          <strong>Anubandha Packs</strong>
+          <span>Packaging Pouch Manufacturer</span>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-small" id="openQuoteTop" type="button">Request Quote</button>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-left">
+        <div class="kicker">Premium Flexible Packaging</div>
+
+        <h1>Packaging pouches that make your brand look premium.</h1>
+
+        <p class="lead">
+          Stand-up zipper, spout, side gusset, flat pouches and more —
+          with clean finishing and custom printing options.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">Fast Production</div>
+          <div class="badge">Low MOQ</div>
+          <div class="badge">Pan India Delivery</div>
+        </div>
+
+        <div class="hero-cta">
+          <button class="btn" id="openQuoteHero" type="button">Get Quote</button>
+          <a class="btn btn-ghost" href="#products">Browse Products</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <img src="images/standup.jpg" alt="Stand-up zipper pouch">
+          <div class="hero-card-text">
+            <strong>Stand-up Zipper Pouches</strong>
+            <span>Perfect for coffee, dry fruits & snacks</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Our Product Range</h2>
+        <p>Premium packaging pouch solutions.</p>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <img src="images/standup.jpg" alt="Standup Zipper Pouch">
+          <h3>Standup Zipper Pouch</h3>
+          <p>Perfect for snacks and dry food.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/spout.jpg" alt="Spout Pouch">
+          <h3>Spout Pouch</h3>
+          <p>Ideal for liquids and sauces.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/sidegusset.jpg" alt="Side Gusset Pouch">
+          <h3>Side Gusset</h3>
+          <p>Great for coffee and grains.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/flat.jpg" alt="Flat Pouch">
+          <h3>Flat Pouch</h3>
+          <p>Best for single serve packs.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/centreseal.jpg" alt="Centre Seal">
+          <h3>Centre Seal</h3>
+          <p>Strong FMCG packaging.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/threeside.jpg" alt="3 Side Seal">
+          <h3>3 Side Seal</h3>
+          <p>Perfect for samples.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact">
+
+      <div>
+        <h2>Request Quote</h2>
+        <p>Send pouch type, size and quantity.</p>
+
+        <div class="contact-box">
+          <strong>Phone / WhatsApp:</strong>
+          <a href="tel:+919535466394">+91 95354 66394</a>
+        </div>
+      </div>
+
+      <div class="form">
+        <label>Copy message & send on WhatsApp</label>
+
+        <textarea rows="8" readonly>
 Hi Anubandha Packs,
-
 I need quotation for:
 
 Pouch type:
@@ -194,87 +148,63 @@ Size:
 Printing:
 Quantity:
 Location:
+        </textarea>
 
-</textarea>
+        <a class="btn btn-full" href="https://wa.me/919535466394" target="_blank" rel="noopener">
+          Send on WhatsApp
+        </a>
+      </div>
 
-<a class="btn btn-full"
-href="https://wa.me/919535466394"
-target="_blank">
+    </div>
+  </section>
 
-Send on WhatsApp
+  <footer class="footer">
+    <div class="container foot">
+      <span>© <span id="y"></span> Anubandha Packs</span>
+    </div>
+  </footer>
 
-</a>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919535466394" class="whatsapp-container" target="_blank" rel="noopener">
+    <span class="whatsapp-text">Chat With Us</span>
+    <div class="whatsapp-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </div>
+  </a>
 
-</div>
+  <!-- Holi dots -->
+  <div class="holi-confetti" aria-hidden="true"></div>
 
-</div>
+  <script>
+    // Year
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-</section>
+    // Get Quote scroll (works 100%)
+    function goToQuote(){
+      document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+    }
+    document.getElementById("openQuoteTop").addEventListener("click", goToQuote);
+    document.getElementById("openQuoteHero").addEventListener("click", goToQuote);
 
-
-
-<footer class="footer">
-
-<div class="container foot">
-
-<span>© <span id="y"></span> Anubandha Packs</span>
-
-</div>
-
-</footer>
-
-
-
-<!-- WHATSAPP FLOAT -->
-
-<a href="https://wa.me/919535466394"
-class="whatsapp-container"
-target="_blank">
-
-<span class="whatsapp-text">Chat With Us</span>
-
-<div class="whatsapp-icon">
-
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-
-</div>
-
-</a>
-
-
-
-<!-- HOLI DOTS -->
-
-<div class="holi-confetti"></div>
-
-
-
-<script>
-
-document.getElementById("y").textContent=new Date().getFullYear()
-
-const box=document.querySelector(".holi-confetti")
-
-const colors=["#ff0080","#00c8ff","#ffc800","#00ffa0","#7c5cff","#ff5a00"]
-
-for(let i=0;i<60;i++){
-
-const dot=document.createElement("span")
-
-dot.style.left=Math.random()*100+"vw"
-
-dot.style.background=colors[Math.floor(Math.random()*colors.length)]
-
-dot.style.animationDuration=5+Math.random()*5+"s"
-
-dot.style.animationDelay=Math.random()*5+"s"
-
-box.appendChild(dot)
-
-}
-
-</script>
-
+    // Holi confetti
+    const box = document.querySelector(".holi-confetti");
+    const colors = ["#ff0080","#00c8ff","#ffc800","#00ffa0","#7c5cff","#ff5a00"];
+    if (box){
+      box.innerHTML = "";
+      for (let i=0;i<60;i++){
+        const dot = document.createElement("span");
+        dot.style.left = Math.random()*100 + "vw";
+        dot.style.top = (-10 - Math.random()*90) + "vh";
+        dot.style.background = colors[Math.floor(Math.random()*colors.length)];
+        dot.style.animationDuration = (5 + Math.random()*6) + "s";
+        dot.style.animationDelay = (Math.random()*4) + "s";
+        const s = (6 + Math.random()*10);
+        dot.style.width = s + "px";
+        dot.style.height = s + "px";
+        box.appendChild(dot);
+      }
+    }
+  </script>
 
 </body>
 </html>
