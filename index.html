@@ -24,7 +24,8 @@
       <a href="#trusted">Trusted By</a>
       <a href="#contact">Contact</a>
 
-      <button class="theme-toggle" id="themeToggle" type="button">
+      <!-- Dark mode toggle button -->
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
         <span class="sun">☀</span>
         <span class="moon">🌙</span>
       </button>
@@ -34,6 +35,7 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
 
@@ -66,7 +68,7 @@
 
     <div class="hero-right">
       <div class="hero-card">
-        <img src="images/standup.jpg">
+        <img src="images/standup.jpg" alt="Stand-up zipper pouch">
         <div class="hero-card-text">
           <strong>Stand-up Zipper Pouches</strong>
           <span>Best for dry fruits, coffee, millets & snacks</span>
@@ -89,49 +91,49 @@
 
       <a class="card-linkwrap" href="standup.html">
         <article class="card">
-          <img src="images/standup.jpg">
+          <img src="images/standup.jpg" alt="Stand-up zipper pouches">
           <h3>Stand-up Zipper Pouches</h3>
-          <p>Strong stand-up structure with zipper.</p>
+          <p>Strong stand-up structure with zipper. Great for dry items & retail packs.</p>
         </article>
       </a>
 
       <a class="card-linkwrap" href="spout.html">
         <article class="card">
-          <img src="images/spout.jpg">
+          <img src="images/spout.jpg" alt="Spout pouches">
           <h3>Spout Pouches</h3>
-          <p>Leak-proof packaging for liquids.</p>
+          <p>Leak-proof packaging for liquids & semi-liquids like sauces and juices.</p>
         </article>
       </a>
 
       <a class="card-linkwrap" href="sidegusset.html">
         <article class="card">
-          <img src="images/sidegusset.jpg">
+          <img src="images/sidegusset.jpg" alt="Side gusset pouches">
           <h3>Side Gusset Pouches</h3>
-          <p>Premium shelf look.</p>
+          <p>More volume, premium shelf look — perfect for coffee, grains & dry products.</p>
         </article>
       </a>
 
       <a class="card-linkwrap" href="flat.html">
         <article class="card">
-          <img src="images/flat.jpg">
+          <img src="images/flat.jpg" alt="Flat pouches">
           <h3>Flat Pouches</h3>
-          <p>Cost-effective packaging.</p>
+          <p>Cost-effective pouches for single-serve and compact packing.</p>
         </article>
       </a>
 
       <a class="card-linkwrap" href="centreseal.html">
         <article class="card">
-          <img src="images/centreseal.jpg">
+          <img src="images/centreseal.jpg" alt="Centre seal pouches">
           <h3>Centre Seal Pouches</h3>
-          <p>Reliable FMCG packaging.</p>
+          <p>Reliable sealing and strong structure for FMCG packaging.</p>
         </article>
       </a>
 
       <a class="card-linkwrap" href="threeside.html">
         <article class="card">
-          <img src="images/threeside.jpg">
+          <img src="images/threeside.jpg" alt="Three side seal pouches">
           <h3>Three Side Seal Pouches</h3>
-          <p>Compact sachet packs.</p>
+          <p>Compact pouches ideal for samples, sachets and small packs.</p>
         </article>
       </a>
 
@@ -139,6 +141,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="container contact">
     <div>
@@ -146,24 +149,24 @@
       <p class="muted">Send your pouch type, size, quantity and printing requirement.</p>
 
       <div class="contact-box">
-        <strong>Phone / WhatsApp:</strong> +91 95910 79347
+        <div><strong>Phone / WhatsApp:</strong> <a href="tel:+919591079347">+91 95910 79347</a></div>
       </div>
     </div>
 
     <div class="form">
-      <textarea readonly rows="8">
-Hi Anubandha Packs,
+      <label>Copy this message and send on WhatsApp:</label>
+      <textarea readonly rows="8">Hi Anubandha Packs,
 I need quotation for:
 Pouch type:
 Size (W x H):
-Printing:
+Printing: Yes/No
 Quantity:
 Delivery location:
-      </textarea>
+Thank you.</textarea>
 
       <a class="btn btn-full"
-         href="https://wa.me/919535466394"
-         target="_blank">
+         href="https://wa.me/919535466394?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
+         target="_blank" rel="noopener">
         Send on WhatsApp
       </a>
     </div>
@@ -173,11 +176,265 @@ Delivery location:
 <footer class="footer">
   <div class="container foot">
     <span>© <span id="y"></span> Anubandha Packs</span>
+    <span class="muted">Hosted on GitHub Pages</span>
   </div>
 </footer>
 
+<!-- PREMIUM FLOATING WHATSAPP -->
+<a href="https://wa.me/919535466394?text=Hi%20Anubandha%20Packs,%20I%20need%20quotation%20for%20pouches."
+   class="whatsapp-container"
+   target="_blank" aria-label="Chat on WhatsApp" rel="noopener">
+  <span class="whatsapp-text">Chat With Us</span>
+  <div class="whatsapp-icon">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </div>
+</a>
+
+<!-- QUOTE MODAL -->
+<div class="modal" id="quoteModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="1"></div>
+
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+    <div class="modal-head">
+      <h3 id="quoteTitle">Request a Quote</h3>
+      <button class="icon-btn" id="quoteClose" aria-label="Close">✕</button>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="steps">
+
+      <div class="step active" data-step="1">
+        <p class="step-title">Select pouch type</p>
+        <div class="options">
+          <button class="opt" data-value="Standup Zipper Pouch">Standup Zipper Pouch</button>
+          <button class="opt" data-value="Standup without zipper pouch">Standup without zipper pouch</button>
+          <button class="opt" data-value="Center seal pouch">Center seal pouch</button>
+          <button class="opt" data-value="Flat Bottom Pouch">Flat Bottom Pouch</button>
+          <button class="opt" data-value="Side Gusset Pouch">Side Gusset Pouch</button>
+          <button class="opt" data-value="Spout Pouch">Spout Pouch</button>
+          <button class="opt" data-value="3 Side seal pouch">3 Side seal pouch</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="2">
+        <p class="step-title">Plain or Printed?</p>
+        <div class="options">
+          <button class="opt" data-field="printing" data-value="Plain">Plain</button>
+          <button class="opt" data-field="printing" data-value="Printed">Printed</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="3">
+        <p class="step-title">Enter size (W × H)</p>
+        <input class="input" id="sizeInput" placeholder='Example: 6" × 9" or 150mm × 230mm'>
+      </div>
+
+      <div class="step" data-step="4">
+        <p class="step-title">Enter quantity</p>
+        <input class="input" id="qtyInput" type="number" min="1" placeholder="Example: 5000">
+      </div>
+
+      <div class="step" data-step="5">
+        <p class="step-title">Your contact details</p>
+        <div class="two-col">
+          <input class="input" id="nameInput" placeholder="Full name">
+          <input class="input" id="phoneInput" placeholder="Phone / WhatsApp number">
+        </div>
+        <input class="input" id="cityInput" placeholder="Delivery city/location">
+      </div>
+
+      <div class="step" data-step="6">
+        <p class="step-title">Done ✅</p>
+        <p class="muted">We received your request. We’ll respond soon.</p>
+      </div>
+
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="backBtn" disabled type="button">Back</button>
+      <button class="btn" id="nextBtn" disabled type="button">Next</button>
+    </div>
+  </div>
+</div>
+
 <script>
-document.getElementById("y").textContent = new Date().getFullYear();
+  // footer year
+  const yEl = document.getElementById("y");
+  if (yEl) yEl.textContent = new Date().getFullYear();
+
+  // dark mode
+  const toggle = document.getElementById("themeToggle");
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") document.documentElement.classList.add("dark");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      localStorage.setItem(
+        "theme",
+        document.documentElement.classList.contains("dark") ? "dark" : "light"
+      );
+    });
+  }
+
+  // ===== Quote Modal Wizard =====
+  const modal = document.getElementById("quoteModal");
+  const openBtn = document.getElementById("openQuote");
+  const openBtn2 = document.getElementById("openQuote2");
+  const closeBtn = document.getElementById("quoteClose");
+  const backBtn = document.getElementById("backBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const progressBar = document.getElementById("progressBar");
+  const steps = modal ? [...modal.querySelectorAll(".step")] : [];
+
+  let step = 1;
+  const formData = {
+    pouchType: "",
+    printing: "",
+    size: "",
+    quantity: "",
+    name: "",
+    phone: "",
+    city: ""
+  };
+
+  function setSelected(btn) {
+    const wrap = btn.parentElement;
+    wrap.querySelectorAll(".opt").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+  }
+
+  function validateStep() {
+    const sizeInput = document.getElementById("sizeInput");
+    const qtyInput = document.getElementById("qtyInput");
+    const nameInput = document.getElementById("nameInput");
+    const phoneInput = document.getElementById("phoneInput");
+
+    if (step === 1) return !!formData.pouchType;
+    if (step === 2) return !!formData.printing;
+    if (step === 3) return sizeInput && sizeInput.value.trim().length >= 3;
+    if (step === 4) return qtyInput && Number(qtyInput.value) > 0;
+    if (step === 5) return (
+      nameInput && nameInput.value.trim().length >= 2 &&
+      phoneInput && phoneInput.value.trim().length >= 10
+    );
+    return true;
+  }
+
+  function render() {
+    steps.forEach(s => s.classList.remove("active"));
+    const active = modal.querySelector(`.step[data-step="${step}"]`);
+    if (active) active.classList.add("active");
+
+    backBtn.disabled = step === 1;
+    nextBtn.textContent = (step === 5) ? "Submit" : "Next";
+    nextBtn.disabled = !validateStep();
+
+    const pct = Math.min(100, ((step - 1) / 5) * 100);
+    progressBar.style.width = pct + "%";
+  }
+
+  function openModal() {
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+    step = 1;
+
+    // reset selections + inputs
+    modal.querySelectorAll(".opt").forEach(b => b.classList.remove("selected"));
+    ["sizeInput","qtyInput","nameInput","phoneInput","cityInput"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = "";
+    });
+    Object.keys(formData).forEach(k => formData[k] = "");
+
+    render();
+  }
+
+  function closeModal() {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  if (openBtn) openBtn.addEventListener("click", openModal);
+  if (openBtn2) openBtn2.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
+  });
+
+  // option clicks
+  modal.addEventListener("click", (e) => {
+    const opt = e.target.closest(".opt");
+    if (!opt) return;
+
+    if (step === 1) {
+      formData.pouchType = opt.dataset.value || "";
+      setSelected(opt);
+    }
+
+    if (step === 2 && opt.dataset.field === "printing") {
+      formData.printing = opt.dataset.value || "";
+      setSelected(opt);
+    }
+
+    render();
+  });
+
+  // input listeners
+  ["sizeInput","qtyInput","nameInput","phoneInput","cityInput"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", render);
+  });
+
+  backBtn.addEventListener("click", () => {
+    if (step > 1) step--;
+    render();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (!validateStep()) return;
+
+    const sizeInput = document.getElementById("sizeInput");
+    const qtyInput = document.getElementById("qtyInput");
+    const nameInput = document.getElementById("nameInput");
+    const phoneInput = document.getElementById("phoneInput");
+    const cityInput = document.getElementById("cityInput");
+
+    if (step === 3) formData.size = sizeInput.value.trim();
+    if (step === 4) formData.quantity = qtyInput.value.trim();
+
+    if (step === 5) {
+      formData.name = nameInput.value.trim();
+      formData.phone = phoneInput.value.trim();
+      formData.city = cityInput.value.trim();
+
+      const msg =
+`Hi Anubandha Packs, I need quotation:
+Pouch type: ${formData.pouchType}
+Plain/Printed: ${formData.printing}
+Size: ${formData.size}
+Quantity: ${formData.quantity}
+Name: ${formData.name}
+Phone: ${formData.phone}
+Location: ${formData.city}`;
+
+      const wa = "https://wa.me/919535466394?text=" + encodeURIComponent(msg);
+      window.open(wa, "_blank");
+
+      step = 6;
+      render();
+      return;
+    }
+
+    step++;
+    render();
+  });
+
+  render();
 </script>
 
 </body>
