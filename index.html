@@ -197,7 +197,7 @@ Thank you.</textarea>
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
     <div class="modal-head">
       <h3 id="quoteTitle">Request a Quote</h3>
-      <button class="icon-btn" id="quoteClose" aria-label="Close">✕</button>
+      <button class="icon-btn" id="quoteClose" aria-label="Close" type="button">✕</button>
     </div>
 
     <div class="progress">
@@ -209,21 +209,21 @@ Thank you.</textarea>
       <div class="step active" data-step="1">
         <p class="step-title">Select pouch type</p>
         <div class="options">
-          <button class="opt" data-value="Standup Zipper Pouch">Standup Zipper Pouch</button>
-          <button class="opt" data-value="Standup without zipper pouch">Standup without zipper pouch</button>
-          <button class="opt" data-value="Center seal pouch">Center seal pouch</button>
-          <button class="opt" data-value="Flat Bottom Pouch">Flat Bottom Pouch</button>
-          <button class="opt" data-value="Side Gusset Pouch">Side Gusset Pouch</button>
-          <button class="opt" data-value="Spout Pouch">Spout Pouch</button>
-          <button class="opt" data-value="3 Side seal pouch">3 Side seal pouch</button>
+          <button class="opt" data-value="Standup Zipper Pouch" type="button">Standup Zipper Pouch</button>
+          <button class="opt" data-value="Standup without zipper pouch" type="button">Standup without zipper pouch</button>
+          <button class="opt" data-value="Center seal pouch" type="button">Center seal pouch</button>
+          <button class="opt" data-value="Flat Bottom Pouch" type="button">Flat Bottom Pouch</button>
+          <button class="opt" data-value="Side Gusset Pouch" type="button">Side Gusset Pouch</button>
+          <button class="opt" data-value="Spout Pouch" type="button">Spout Pouch</button>
+          <button class="opt" data-value="3 Side seal pouch" type="button">3 Side seal pouch</button>
         </div>
       </div>
 
       <div class="step" data-step="2">
         <p class="step-title">Plain or Printed?</p>
         <div class="options">
-          <button class="opt" data-field="printing" data-value="Plain">Plain</button>
-          <button class="opt" data-field="printing" data-value="Printed">Printed</button>
+          <button class="opt" data-field="printing" data-value="Plain" type="button">Plain</button>
+          <button class="opt" data-field="printing" data-value="Printed" type="button">Printed</button>
         </div>
       </div>
 
@@ -259,6 +259,12 @@ Thank you.</textarea>
     </div>
   </div>
 </div>
+
+<!-- EmailJS (must be before the main script) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("ch1ASxB4v5YJeUtDg");
+</script>
 
 <script>
   // footer year
@@ -301,6 +307,11 @@ Thank you.</textarea>
     city: ""
   };
 
+  // ✅ IMPORTANT: SET YOUR REAL SERVICE ID HERE
+  // Go to EmailJS → Email Services → copy Service ID
+  const SERVICE_ID = "service_anubandha";      // <-- CHANGE THIS if different
+  const TEMPLATE_ID = "template_tfmbzuov";     // Your template ID
+
   function setSelected(btn) {
     const wrap = btn.parentElement;
     wrap.querySelectorAll(".opt").forEach(b => b.classList.remove("selected"));
@@ -342,7 +353,6 @@ Thank you.</textarea>
     modal.setAttribute("aria-hidden", "false");
     step = 1;
 
-    // reset selections + inputs
     modal.querySelectorAll(".opt").forEach(b => b.classList.remove("selected"));
     ["sizeInput","qtyInput","nameInput","phoneInput","cityInput"].forEach(id => {
       const el = document.getElementById(id);
@@ -366,7 +376,6 @@ Thank you.</textarea>
     if (e.target && e.target.dataset && e.target.dataset.close) closeModal();
   });
 
-  // option clicks
   modal.addEventListener("click", (e) => {
     const opt = e.target.closest(".opt");
     if (!opt) return;
@@ -384,7 +393,6 @@ Thank you.</textarea>
     render();
   });
 
-  // input listeners
   ["sizeInput","qtyInput","nameInput","phoneInput","cityInput"].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener("input", render);
@@ -412,6 +420,22 @@ Thank you.</textarea>
       formData.phone = phoneInput.value.trim();
       formData.city = cityInput.value.trim();
 
+      // ✅ SEND EMAIL
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+        pouchType: formData.pouchType,
+        printing: formData.printing,
+        size: formData.size,
+        quantity: formData.quantity,
+        name: formData.name,
+        phone: formData.phone,
+        city: formData.city
+      }).then(() => {
+        console.log("Email sent");
+      }).catch((err) => {
+        console.log("Email failed", err);
+      });
+
+      // ✅ SEND WHATSAPP
       const msg =
 `Hi Anubandha Packs, I need quotation:
 Pouch type: ${formData.pouchType}
